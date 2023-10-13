@@ -8,11 +8,15 @@ project "googletest"
     objdir ("%{wks.location}/Bin-Int/" .. OutputDir .. "/%{prj.name}")
 
     files {
+		"googlemock/src/**.cc",
+		"googlemock/src/**.h",
         "googletest/src/**.cc",
         "googletest/src/**.h"
     }
 
     includedirs {
+		"googlemock/include",
+		"googlemock",
         "googletest/include",
         "googletest"
     }
